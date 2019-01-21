@@ -8,6 +8,7 @@ def my_collect(array)
     empty_array<<name
 
     yield(array[i])
+    i+=1
   end
   return empty_array
 end

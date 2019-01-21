@@ -1,14 +1,9 @@
 
 def my_collect(array)
-  i=0
-  empty_array
-  while i<array.length
-    name = array[i]
-    name.split(" ").first
-    empty_array<<name
-
-    yield(array[i])
-    i+=1
+  empty_array = []
+  counter = 0
+    my_collect(empty_array) do |x|
+      counter += 1
   end
   return empty_array
 end
